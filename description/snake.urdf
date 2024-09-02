@@ -1,0 +1,359 @@
+<?xml version="1.0" ?>
+<robot name="my_robot">
+    <link name="servo_link">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="servo_joint" type="revolute">
+        <parent link="servo_link" />
+        <child link="gear_link" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-1.57" upper="1.57" />
+    </joint>
+
+    <link name="gear_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="gear_joint" type="fixed">
+        <parent link="gear_link" />
+        <child link="servo_link1" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-1.57" upper="1.57" />
+    </joint>
+
+    <link name="servo_link1">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="servo_joint1" type="revolute">
+        <parent link="servo_link1" />
+        <child link="gear_link1" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="gear_link1">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="gear_joint1" type="fixed">
+        <parent link="gear_link1" />
+        <child link="servo_link2" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="servo_link2">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="servo_joint2" type="revolute">
+        <parent link="servo_link2" />
+        <child link="gear_link2" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="gear_link2">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="gear_joint2" type="fixed">
+        <parent link="gear_link2" />
+        <child link="servo_link3" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="servo_link3">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name = "servo_joint3" type="revolute">
+        <parent link="servo_link3" />
+        <child link="gear_link3" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name = "gear_link3">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="gear_joint3" type="fixed">
+        <parent link="gear_link3" />
+        <child link="servo_link4" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="servo_link4">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="servo_joint4" type="revolute">
+        <parent link="servo_link4" />
+        <child link="gear_link4" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="gear_link4">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="gear_joint4" type="fixed">
+        <parent link="gear_link4" />
+        <child link="servo_link5" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="servo_link5">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="servo_joint5" type="revolute">
+        <parent link="servo_link5" />
+        <child link="gear_link5" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="gear_link5">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="gear_joint5" type="fixed">
+        <parent link="gear_link5" />
+        <child link="servo_link6" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="servo_link6">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="servo_joint6" type="revolute">
+        <parent link="servo_link6" />
+        <child link="gear_link6" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="gear_link6">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="gear_joint6" type="fixed">
+        <parent link="gear_link6" />
+        <child link="servo_link7" />
+        <origin xyz="0.1 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" />
+    </joint>
+
+    <link name="servo_link7">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+
+</robot>
+
+
